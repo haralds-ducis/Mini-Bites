@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Pankūciņas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🥞 Mini Pankūciņas</h1>
+    <p>Mini Pancakes • Coffee • Treats</p>
+</header>
+
+<main>
+
+    <section class="products">
+
+        <div class="product">
+            <h2>🥞 Mini pankūciņas</h2>
+            <p>10 gab.</p>
+            <strong>€4.50</strong>
+
+            <button onclick="addToCart('Mini pankūciņas', 4.50)">
+                Pievienot
+            </button>
+        </div>
+
+        <div class="product">
+            <h2>🍫 Nutella</h2>
+            <p>Nutella mērce</p>
+            <strong>€0.80</strong>
+
+            <button onclick="addToCart('Nutella', 0.80)">
+                Pievienot
+            </button>
+        </div>
+
+        <div class="product">
+            <h2>🍓 Zemenes</h2>
+            <p>Svaigas zemenes</p>
+            <strong>€1.00</strong>
+
+            <button onclick="addToCart('Zemenes', 1.00)">
+                Pievienot
+            </button>
+        </div>
+
+        <div class="product">
+            <h2>🍪 Oreo</h2>
+            <p>Oreo gabaliņi</p>
+            <strong>€0.70</strong>
+
+            <button onclick="addToCart('Oreo', 0.70)">
+                Pievienot
+            </button>
+        </div>
+
+        <div class="product">
+            <h2>☕ Kafija</h2>
+            <p>Kafijas dzēriens</p>
+            <strong>€2.50</strong>
+
+            <button onclick="addToCart('Kafija', 2.50)">
+                Pievienot
+            </button>
+        </div>
+
+    </section>
+
+
+    <section class="cart">
+
+        <h2>🛒 Tavs pasūtījums</h2>
+
+        <div id="cartItems">
+            <p>Grozs ir tukšs.</p>
+        </div>
+
+        <h3>
+            Kopā: €<span id="total">0.00</span>
+        </h3>
+
+        <button class="order-button" onclick="placeOrder()">
+            Pasūtīt
+        </button>
+
+    </section>
+
+
+    <section id="confirmation" class="confirmation hidden">
+
+        <h2>🎉 Pasūtījums pieņemts!</h2>
+
+        <p>Pasūtījuma numurs:</p>
+
+        <strong id="orderNumber"></strong>
+
+        <p>
+            Statuss:
+            🟡 Gatavošanā
+        </p>
+
+    </section>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

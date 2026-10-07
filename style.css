@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    color: #222;
+}
+
+header {
+    background: #ffffff;
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #777;
+}
+
+main {
+    width: min(1100px, 100%);
+    margin: auto;
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 16px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.08);
+}
+
+.product h2 {
+    margin-top: 0;
+}
+
+.product strong {
+    font-size: 20px;
+}
+
+button {
+    border: 0;
+    border-radius: 12px;
+
+    padding:
+        13px 16px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product button {
+    display: block;
+    width: 100%;
+
+    margin-top: 15px;
+
+    background: #111;
+    color: white;
+}
+
+.product button:active,
+.order button:active,
+.order-button:active {
+    transform: scale(0.98);
+}
+
+.cart {
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.08);
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid #eee;
+}
+
+.cart-item button {
+    background: #eee;
+    padding: 6px 10px;
+}
+
+.order-button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    background: #111;
+    color: white;
+
+    font-size: 18px;
+}
+
+.confirmation {
+    margin-top: 20px;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 18px;
+}
+
+.confirmation strong {
+    display: block;
+
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.orders {
+    display: grid;
+    gap: 16px;
+}
+
+.order {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.08);
+}
+
+.order h2 {
+    margin-top: 0;
+}
+
+.order li {
+    margin: 8px 0;
+}
+
+.order button {
+    width: 100%;
+
+    background: #111;
+    color: white;
+
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 14px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
